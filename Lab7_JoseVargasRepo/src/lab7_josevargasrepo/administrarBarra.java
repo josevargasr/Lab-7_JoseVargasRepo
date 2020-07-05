@@ -61,7 +61,7 @@ public class administrarBarra extends Thread {
         while (vive) {
             DefaultTableModel m = (DefaultTableModel) tabla.getModel();
             for (int i = 0; i < p.getCanciones().size(); i++) {
-                parte.setText("Reproduciendo: " + p.getCanciones().get(i).getNombre());
+                parte.setText("Reproduciendo: " + p.getCanciones().get(i).getNombre() + " | " + p.getCanciones().get(i).getArtista());
                 barra.setValue(0);
                 barra.setMaximum(p.getCanciones().get(i).getDuracion());
                 for (int j = 0; j < barra.getMaximum(); j++) {

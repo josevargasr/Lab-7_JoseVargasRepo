@@ -59,7 +59,7 @@ public class Album implements Serializable{
 
     @Override
     public String toString() {
-        return nombre + "(" + año + ") | " + artista;
+        return nombre + "(" + año + ") | " + artista + " | Canciones: " + canciones.size();
     }
     
     

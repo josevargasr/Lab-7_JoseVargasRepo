@@ -60,7 +60,7 @@ public class administrarBarra1 extends Thread {
     public void run() {
         while (vive) {
             DefaultTableModel m = (DefaultTableModel) tabla.getModel();
-            parte.setText("Reproduciendo: " + c.getNombre());
+            parte.setText("Reproduciendo: " + c.getNombre() + " | " + c.getArtista());
             barra.setValue(0);
             barra.setMaximum(c.getDuracion());
             for (int j = 0; j < barra.getMaximum(); j++) {
