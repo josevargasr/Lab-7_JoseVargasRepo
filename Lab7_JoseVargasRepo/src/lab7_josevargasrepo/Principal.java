@@ -129,23 +129,54 @@ public class Principal extends javax.swing.JFrame {
         jl_cancion = new javax.swing.JLabel();
         pop_playlist = new javax.swing.JPopupMenu();
         jMenuItem15 = new javax.swing.JMenuItem();
+        jd_verseguidos = new javax.swing.JDialog();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        list_seguidos = new javax.swing.JList<>();
+        jLabel38 = new javax.swing.JLabel();
+        jButton11 = new javax.swing.JButton();
+        jd_crearalbum = new javax.swing.JDialog();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        tf_noma = new javax.swing.JTextField();
+        jLabel41 = new javax.swing.JLabel();
+        jButton12 = new javax.swing.JButton();
+        yc_album = new com.toedter.calendar.JYearChooser();
+        jd_vercanciones1 = new javax.swing.JDialog();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        list_miscanciones1 = new javax.swing.JList<>();
+        jLabel42 = new javax.swing.JLabel();
+        jButton13 = new javax.swing.JButton();
+        jd_vercanciones2 = new javax.swing.JDialog();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        list_albumes = new javax.swing.JList<>();
+        jLabel43 = new javax.swing.JLabel();
+        jButton14 = new javax.swing.JButton();
+        pop_canciones1 = new javax.swing.JPopupMenu();
+        jMenuItem17 = new javax.swing.JMenuItem();
+        jMenuItem18 = new javax.swing.JMenuItem();
+        jMenuItem19 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        mi_login = new javax.swing.JMenuItem();
+        mi_regu = new javax.swing.JMenuItem();
+        mi_rega = new javax.swing.JMenuItem();
+        mi_logout = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel2.setText("Iniciar Sesión");
@@ -686,6 +717,11 @@ public class Principal extends javax.swing.JFrame {
         );
 
         list_miscanciones.setModel(new DefaultListModel());
+        list_miscanciones.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                list_miscancionesMouseClicked(evt);
+            }
+        });
         jScrollPane3.setViewportView(list_miscanciones);
 
         jLabel35.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
@@ -744,6 +780,11 @@ public class Principal extends javax.swing.JFrame {
         pop_canciones.add(jMenuItem12);
 
         jMenuItem13.setText("Reproducir");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
         pop_canciones.add(jMenuItem13);
 
         jMenuItem14.setText("Agregar a Playlist");
@@ -896,6 +937,228 @@ public class Principal extends javax.swing.JFrame {
         });
         pop_playlist.add(jMenuItem15);
 
+        list_seguidos.setModel(new DefaultListModel());
+        jScrollPane6.setViewportView(list_seguidos);
+
+        jLabel38.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel38.setText("Artistas Seguidos");
+
+        jButton11.setText("<- Volver");
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton11MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_verseguidosLayout = new javax.swing.GroupLayout(jd_verseguidos.getContentPane());
+        jd_verseguidos.getContentPane().setLayout(jd_verseguidosLayout);
+        jd_verseguidosLayout.setHorizontalGroup(
+            jd_verseguidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_verseguidosLayout.createSequentialGroup()
+                .addGroup(jd_verseguidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_verseguidosLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jButton11))
+                    .addGroup(jd_verseguidosLayout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jd_verseguidosLayout.createSequentialGroup()
+                        .addGap(200, 200, 200)
+                        .addComponent(jLabel38)))
+                .addContainerGap(145, Short.MAX_VALUE))
+        );
+        jd_verseguidosLayout.setVerticalGroup(
+            jd_verseguidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_verseguidosLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel38)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                .addGap(16, 16, 16))
+        );
+
+        jLabel39.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel39.setText("Crear Album");
+
+        jLabel40.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel40.setText("Nombre:");
+
+        jLabel41.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel41.setText("Año:");
+
+        jButton12.setText("Agregar");
+        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton12MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel41)
+                    .addComponent(jLabel40))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tf_noma, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                    .addComponent(yc_album, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel39)))
+                .addContainerGap(114, Short.MAX_VALUE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(173, 173, 173)
+                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel39)
+                .addGap(35, 35, 35)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel40)
+                    .addComponent(tf_noma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(yc_album, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel41))
+                .addGap(30, 30, 30)
+                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jd_crearalbumLayout = new javax.swing.GroupLayout(jd_crearalbum.getContentPane());
+        jd_crearalbum.getContentPane().setLayout(jd_crearalbumLayout);
+        jd_crearalbumLayout.setHorizontalGroup(
+            jd_crearalbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jd_crearalbumLayout.setVerticalGroup(
+            jd_crearalbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        list_miscanciones1.setModel(new DefaultListModel());
+        jScrollPane7.setViewportView(list_miscanciones1);
+
+        jLabel42.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel42.setText("Mis Canciones");
+
+        jButton13.setText("<- Volver");
+        jButton13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton13MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_vercanciones1Layout = new javax.swing.GroupLayout(jd_vercanciones1.getContentPane());
+        jd_vercanciones1.getContentPane().setLayout(jd_vercanciones1Layout);
+        jd_vercanciones1Layout.setHorizontalGroup(
+            jd_vercanciones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_vercanciones1Layout.createSequentialGroup()
+                .addGroup(jd_vercanciones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_vercanciones1Layout.createSequentialGroup()
+                        .addGap(241, 241, 241)
+                        .addComponent(jLabel42))
+                    .addGroup(jd_vercanciones1Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jButton13))
+                    .addGroup(jd_vercanciones1Layout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(145, Short.MAX_VALUE))
+        );
+        jd_vercanciones1Layout.setVerticalGroup(
+            jd_vercanciones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_vercanciones1Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel42)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                .addGap(16, 16, 16))
+        );
+
+        list_albumes.setModel(new DefaultListModel());
+        jScrollPane8.setViewportView(list_albumes);
+
+        jLabel43.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel43.setText("Mis Álbumes");
+
+        jButton14.setText("<- Volver");
+        jButton14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton14MouseClicked(evt);
+            }
+        });
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_vercanciones2Layout = new javax.swing.GroupLayout(jd_vercanciones2.getContentPane());
+        jd_vercanciones2.getContentPane().setLayout(jd_vercanciones2Layout);
+        jd_vercanciones2Layout.setHorizontalGroup(
+            jd_vercanciones2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_vercanciones2Layout.createSequentialGroup()
+                .addGroup(jd_vercanciones2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_vercanciones2Layout.createSequentialGroup()
+                        .addGap(241, 241, 241)
+                        .addComponent(jLabel43))
+                    .addGroup(jd_vercanciones2Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jButton14))
+                    .addGroup(jd_vercanciones2Layout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(145, Short.MAX_VALUE))
+        );
+        jd_vercanciones2Layout.setVerticalGroup(
+            jd_vercanciones2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_vercanciones2Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel43)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                .addGap(16, 16, 16))
+        );
+
+        jMenuItem17.setText("Seguir Artista");
+        jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem17ActionPerformed(evt);
+            }
+        });
+        pop_canciones1.add(jMenuItem17);
+
+        jMenuItem18.setText("Reproducir");
+        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem18ActionPerformed(evt);
+            }
+        });
+        pop_canciones1.add(jMenuItem18);
+
+        jMenuItem19.setText("Agregar a Playlist");
+        jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem19ActionPerformed(evt);
+            }
+        });
+        pop_canciones1.add(jMenuItem19);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel11.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
@@ -930,29 +1193,38 @@ public class Principal extends javax.swing.JFrame {
 
         jMenu3.setText("Log In");
 
-        jMenuItem4.setText("Iniciar Sesion");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        mi_login.setText("Iniciar Sesion");
+        mi_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                mi_loginActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem4);
+        jMenu3.add(mi_login);
 
-        jMenuItem1.setText("Crear Usuario");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        mi_regu.setText("Crear Usuario");
+        mi_regu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                mi_reguActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem1);
+        jMenu3.add(mi_regu);
 
-        jMenuItem2.setText("Crear Artista");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        mi_rega.setText("Crear Artista");
+        mi_rega.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                mi_regaActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem2);
+        jMenu3.add(mi_rega);
+
+        mi_logout.setText("Cerrar Sesión");
+        mi_logout.setEnabled(false);
+        mi_logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mi_logoutActionPerformed(evt);
+            }
+        });
+        jMenu3.add(mi_logout);
 
         jMenuBar1.add(jMenu3);
 
@@ -991,6 +1263,14 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem10);
 
+        jMenuItem1.setText("Mis Artistas");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Artistas");
@@ -1005,6 +1285,11 @@ public class Principal extends javax.swing.JFrame {
         jMenu2.add(jMenuItem6);
 
         jMenuItem7.setText("Agregar Álbum");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem7);
 
         jMenuItem8.setText("Ver Seguidores");
@@ -1014,6 +1299,22 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jMenu2.add(jMenuItem8);
+
+        jMenuItem2.setText("Mis Canciones");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem2);
+
+        jMenuItem4.setText("Mis Álbums");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem4);
 
         jMenuBar1.add(jMenu2);
 
@@ -1033,11 +1334,11 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void mi_regaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_regaActionPerformed
         jd_creara.setVisible(true);
         jd_creara.pack();
         jd_creara.setLocationRelativeTo(this);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_mi_regaActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         boolean login = false;
@@ -1051,6 +1352,10 @@ public class Principal extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(jd_login, "Se inició sesión con éxito!");
                     jMenu1.setEnabled(true);
                     jMenu2.setEnabled(false);
+                    mi_logout.setEnabled(true);
+                    mi_login.setEnabled(false);
+                    mi_rega.setEnabled(false);
+                    mi_regu.setEnabled(false);
                 }
             }
         } else {
@@ -1063,6 +1368,10 @@ public class Principal extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(jd_login, "Se inició sesión con éxito!");
                     jMenu2.setEnabled(true);
                     jMenu1.setEnabled(false);
+                    mi_logout.setEnabled(true);
+                    mi_login.setEnabled(false);
+                    mi_rega.setEnabled(false);
+                    mi_regu.setEnabled(false);
                 }
             }
         }
@@ -1088,17 +1397,17 @@ public class Principal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton2MouseClicked
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void mi_reguActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_reguActionPerformed
         jd_crearu.setVisible(true);
         jd_crearu.pack();
         jd_crearu.setLocationRelativeTo(this);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_mi_reguActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void mi_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_loginActionPerformed
         jd_login.setVisible(true);
         jd_login.pack();
         jd_login.setLocationRelativeTo(this);
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_mi_loginActionPerformed
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         try {
@@ -1296,11 +1605,11 @@ public class Principal extends javax.swing.JFrame {
         adminUsuario ac2 = new adminUsuario("./usuarios.jfv");
         ac2.cargarArchivo();
         Playlist temp = (Playlist) cb_playlists.getSelectedItem();
-        DefaultListModel modeloLista = (DefaultListModel) list_canciones.getModel();
+        DefaultListModel modeloLista = (DefaultListModel) list_miscanciones.getModel();
         for (Playlist p : iniciado.getPlaylist()) {
             if (p.getNombre().equals(temp.getNombre())) {
-                iniciado.getPlaylist().get(iniciado.getPlaylist().indexOf(p)).getCanciones().add((Canción) modeloLista.get(list_canciones.getSelectedIndex()));
-                iniciado.getPlaylist().get(iniciado.getPlaylist().indexOf(p)).setDuracion((int) (iniciado.getPlaylist().get(iniciado.getPlaylist().indexOf(p)).getDuracion() + ((Canción) modeloLista.get(list_canciones.getSelectedIndex())).getDuracion()));
+                iniciado.getPlaylist().get(iniciado.getPlaylist().indexOf(p)).getCanciones().add((Canción) modeloLista.get(list_miscanciones.getSelectedIndex()));
+                iniciado.getPlaylist().get(iniciado.getPlaylist().indexOf(p)).setDuracion((int) (iniciado.getPlaylist().get(iniciado.getPlaylist().indexOf(p)).getDuracion() + ((Canción) modeloLista.get(list_miscanciones.getSelectedIndex())).getDuracion()));
             }
         }
         for (Usuario a : ac2.getListausuarios()) {
@@ -1348,11 +1657,178 @@ public class Principal extends javax.swing.JFrame {
             jd_reproducir.setLocationRelativeTo(this);
             DefaultListModel modeloLista = (DefaultListModel) list_playlist.getModel();
             Playlist temp = ((Playlist) modeloLista.get(list_playlist.getSelectedIndex()));
-            administrarBarra ab=new administrarBarra(pb_1, tabla_canciones, jd_reproducir, jl_cancion, temp);
+            administrarBarra ab = new administrarBarra(pb_1, tabla_canciones, jd_reproducir, jl_cancion, temp);
             ab.start();
         }
-            
+
     }//GEN-LAST:event_jMenuItem15ActionPerformed
+
+    private void mi_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_logoutActionPerformed
+        if (mi_logout.isEnabled()) {
+            jMenu2.setEnabled(false);
+            jMenu1.setEnabled(false);
+            mi_logout.setEnabled(false);
+            mi_login.setEnabled(true);
+            mi_rega.setEnabled(true);
+            mi_regu.setEnabled(true);
+            JOptionPane.showMessageDialog(this, "Se cerró sesión con éxito");
+        }
+
+    }//GEN-LAST:event_mi_logoutActionPerformed
+
+    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
+        jd_verseguidos.dispose();
+    }//GEN-LAST:event_jButton11MouseClicked
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        ((DefaultListModel) list_seguidos.getModel()).clear();
+        DefaultListModel modelo = (DefaultListModel) list_seguidos.getModel();
+        for (int i = 0; i < iniciado.getArtistas().size(); i++) {
+            modelo.addElement(iniciado.getArtistas().get(i));
+        }
+        list_seguidos.setModel(modelo);
+        jd_verseguidos.setVisible(true);
+        jd_verseguidos.pack();
+        jd_verseguidos.setLocationRelativeTo(this);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
+        try {
+            Album c = new Album(tf_noma.getText(), yc_album.getYear(), ainiciado);
+            ainiciado.getAlbumes().add(c);
+            adminArtista ac = new adminArtista("./artistas.jfv");
+            ac.cargarArchivo();
+            for (Artista a : ac.getListaartistas()) {
+                if (a.getNombre().equals(ainiciado.getNombre())) {
+                    ac.getListaartistas().set(ac.getListaartistas().indexOf(a), ainiciado);
+                    break;
+                }
+            }
+            ac.escribirArchivo();
+            JOptionPane.showMessageDialog(this, "Album guardado exitosamente");
+            jd_crearalbum.dispose();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Ocurrió un error al guardar el album");
+        }
+    }//GEN-LAST:event_jButton12MouseClicked
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        jd_crearalbum.setVisible(true);
+        jd_crearalbum.pack();
+        jd_crearalbum.setLocationRelativeTo(this);
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        ((DefaultListModel) list_albumes.getModel()).clear();
+        DefaultListModel modelo = (DefaultListModel) list_albumes.getModel();
+        for (int i = 0; i < ainiciado.getAlbumes().size(); i++) {
+            modelo.addElement(ainiciado.getAlbumes().get(i));
+        }
+        list_albumes.setModel(modelo);
+        jd_vercanciones2.setVisible(true);
+        jd_vercanciones2.pack();
+        jd_vercanciones2.setLocationRelativeTo(this);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jButton13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MouseClicked
+        jd_vercanciones1.dispose();
+    }//GEN-LAST:event_jButton13MouseClicked
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        ((DefaultListModel) list_miscanciones1.getModel()).clear();
+        DefaultListModel modelo = (DefaultListModel) list_miscanciones1.getModel();
+        for (int i = 0; i < ainiciado.getCanciones().size(); i++) {
+            modelo.addElement(ainiciado.getCanciones().get(i));
+        }
+        list_miscanciones1.setModel(modelo);
+        jd_vercanciones1.setVisible(true);
+        jd_vercanciones1.pack();
+        jd_vercanciones1.setLocationRelativeTo(this);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jButton14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton14MouseClicked
+        jd_vercanciones2.dispose();
+    }//GEN-LAST:event_jButton14MouseClicked
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
+        if (list_miscanciones.getSelectedIndex() >= 0) {
+            DefaultListModel modeloLista = (DefaultListModel) list_miscanciones.getModel();
+            Artista temp = ((Canción) modeloLista.get(list_miscanciones.getSelectedIndex())).getArtista();
+            adminUsuario ac2 = new adminUsuario("./usuarios.jfv");
+            ac2.cargarArchivo();
+            adminArtista ac = new adminArtista("./artistas.jfv");
+            ac.cargarArchivo();
+            for (Artista a : ac.getListaartistas()) {
+                if (a.getNombre().equals(temp.getNombre())) {
+                    a.getSeguidores().add(iniciado);
+                    ac.getListaartistas().set(ac.getListaartistas().indexOf(a), a);
+                    iniciado.getArtistas().add(a);
+                    break;
+                }
+            }
+            for (Usuario a : ac2.getListausuarios()) {
+                if (a.getNombre().equals(iniciado.getNombre())) {
+                    ac2.getListausuarios().set(ac2.getListausuarios().indexOf(a), iniciado);
+                    break;
+                }
+            }
+            ac.escribirArchivo();
+            ac2.escribirArchivo();
+            JOptionPane.showMessageDialog(jd_vercanciones, "Ahora sigues a " + temp.getNombre() + " " + temp.getApellido());
+        }
+    }//GEN-LAST:event_jMenuItem17ActionPerformed
+
+    private void jMenuItem19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem19ActionPerformed
+        if (list_miscanciones.getSelectedIndex() >= 0) {
+            DefaultComboBoxModel modelo
+                    = new DefaultComboBoxModel(
+                            iniciado.getPlaylist().toArray());
+            cb_playlists.setModel(modelo);
+            jd_agc_a_p.setVisible(true);
+            jd_agc_a_p.pack();
+            jd_agc_a_p.setLocationRelativeTo(this);
+        }
+    }//GEN-LAST:event_jMenuItem19ActionPerformed
+
+    private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
+        DefaultTableModel dtm = (DefaultTableModel) tabla_canciones.getModel();
+        dtm.setRowCount(0);
+        tabla_canciones.setModel(dtm);
+        jd_reproducir.setVisible(true);
+        jd_reproducir.pack();
+        jd_reproducir.setLocationRelativeTo(this);
+        DefaultListModel modeloLista = (DefaultListModel) list_miscanciones.getModel();
+        Canción c = ((Canción) modeloLista.get(list_miscanciones.getSelectedIndex()));
+        administrarBarra1 ab = new administrarBarra1(pb_1, tabla_canciones, jd_reproducir, jl_cancion, c);
+        ab.start();
+
+    }//GEN-LAST:event_jMenuItem18ActionPerformed
+
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+        DefaultTableModel dtm = (DefaultTableModel) tabla_canciones.getModel();
+        dtm.setRowCount(0);
+        tabla_canciones.setModel(dtm);
+        jd_reproducir.setVisible(true);
+        jd_reproducir.pack();
+        jd_reproducir.setLocationRelativeTo(this);
+        DefaultListModel modeloLista = (DefaultListModel) list_canciones.getModel();
+        Canción c = ((Canción) modeloLista.get(list_canciones.getSelectedIndex()));
+        administrarBarra1 ab = new administrarBarra1(pb_1, tabla_canciones, jd_reproducir, jl_cancion, c);
+        ab.start();
+
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
+
+    private void list_miscancionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_list_miscancionesMouseClicked
+        if (list_miscanciones.getSelectedIndex() >= 0) {
+            if (evt.isMetaDown()) {
+                pop_canciones1.show(evt.getComponent(), evt.getX(), evt.getY());
+            }
+        }
+    }//GEN-LAST:event_list_miscancionesMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1397,6 +1873,10 @@ public class Principal extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser dc_fechau;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1429,7 +1909,13 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1446,6 +1932,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
+    private javax.swing.JMenuItem jMenuItem17;
+    private javax.swing.JMenuItem jMenuItem18;
+    private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
@@ -1461,13 +1950,18 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JDialog jd_agc_a_p;
     private javax.swing.JDialog jd_creara;
+    private javax.swing.JDialog jd_crearalbum;
     private javax.swing.JDialog jd_crearc;
     private javax.swing.JDialog jd_crearp;
     private javax.swing.JDialog jd_crearu;
@@ -1475,16 +1969,27 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JDialog jd_login;
     private javax.swing.JDialog jd_reproducir;
     private javax.swing.JDialog jd_vercanciones;
+    private javax.swing.JDialog jd_vercanciones1;
+    private javax.swing.JDialog jd_vercanciones2;
     private javax.swing.JDialog jd_verplaylists;
+    private javax.swing.JDialog jd_verseguidos;
     private javax.swing.JDialog jd_verseguis;
     private javax.swing.JLabel jl_cancion;
+    private javax.swing.JList<String> list_albumes;
     private javax.swing.JList<String> list_canciones;
     private javax.swing.JList<String> list_miscanciones;
+    private javax.swing.JList<String> list_miscanciones1;
     private javax.swing.JList<String> list_playlist;
     private javax.swing.JList<String> list_seguidores;
+    private javax.swing.JList<String> list_seguidos;
+    private javax.swing.JMenuItem mi_login;
+    private javax.swing.JMenuItem mi_logout;
+    private javax.swing.JMenuItem mi_rega;
+    private javax.swing.JMenuItem mi_regu;
     private javax.swing.JProgressBar pb_1;
     private javax.swing.JPasswordField pf_pass;
     private javax.swing.JPopupMenu pop_canciones;
+    private javax.swing.JPopupMenu pop_canciones1;
     private javax.swing.JPopupMenu pop_playlist;
     private javax.swing.JRadioButton rb_artista;
     private javax.swing.JRadioButton rb_user;
@@ -1493,6 +1998,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField tf_apellidou;
     private javax.swing.JTextField tf_duracionc;
     private javax.swing.JTextField tf_generop;
+    private javax.swing.JTextField tf_noma;
     private javax.swing.JTextField tf_nombrea;
     private javax.swing.JTextField tf_nombrec;
     private javax.swing.JTextField tf_nombrep;
@@ -1502,6 +2008,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField tf_user;
     private javax.swing.JTextField tf_usuarioa;
     private javax.swing.JTextField tf_usuariou;
+    private com.toedter.calendar.JYearChooser yc_album;
     private com.toedter.calendar.JYearChooser yc_cancion;
     // End of variables declaration//GEN-END:variables
     Usuario iniciado;

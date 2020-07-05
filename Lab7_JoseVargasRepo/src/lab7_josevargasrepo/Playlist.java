@@ -21,6 +21,11 @@ public class Playlist implements Serializable{
     private int duracion;
     private static final long serialVersionUID=777L;
 
+    public Playlist() {
+    }
+
+    
+    
     public Playlist(String nombre, String genero, Date creacion, int duracion) {
         this.nombre = nombre;
         this.genero = genero;

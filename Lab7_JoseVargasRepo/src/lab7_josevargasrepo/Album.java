@@ -14,12 +14,12 @@ import java.util.ArrayList;
  */
 public class Album implements Serializable{
     private String nombre;
-    private String año;
+    private int año;
     private Artista artista;
     private ArrayList<Canción> canciones = new ArrayList();
     private static final long serialVersionUID=777L;
 
-    public Album(String nombre, String año, Artista artista) {
+    public Album(String nombre, int año, Artista artista) {
         this.nombre = nombre;
         this.año = año;
         this.artista = artista;
@@ -33,11 +33,11 @@ public class Album implements Serializable{
         this.nombre = nombre;
     }
 
-    public String getAño() {
+    public int getAño() {
         return año;
     }
 
-    public void setAño(String año) {
+    public void setAño(int año) {
         this.año = año;
     }
 
@@ -59,7 +59,7 @@ public class Album implements Serializable{
 
     @Override
     public String toString() {
-        return "Album{" + "nombre=" + nombre + ", a\u00f1o=" + año + ", artista=" + artista + '}';
+        return nombre + "(" + año + ") | " + artista;
     }
     
     
